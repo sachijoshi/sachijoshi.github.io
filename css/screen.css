@@ -67,17 +67,61 @@ a.btn:hover {
 
 .about-content {
     display: flex;
-    align-items: center;
-    gap: 20px; /* Adjust spacing between image and text */
+    align-items: flex-start; /* Aligns items at the top */
+    gap: 20px; /* Adds space between the image and text box */
 }
 
 .about-content img {
-    width: 250px; /* Resize the image */
-    height: auto; /* Maintain aspect ratio */
-    border-radius: 10px; /* Optional: Adds rounded corners */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Optional: Adds a subtle shadow */
+    width: 200px; /* Adjust the size of the image */
+    height: auto; /* Maintain the image's aspect ratio */
+    border-radius: 10px; /* Optional: Add rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Optional: Add a shadow effect */
 }
 
+.text-box {
+    background-color: #1e1e1e; /* Dark background for the text box */
+    color: #fff; /* White text */
+    padding: 20px; /* Add padding inside the box */
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Optional: Add a subtle shadow */
+    line-height: 1.6; /* Improves readability */
+    /*max-width: 600px; /* Optional: Set a maximum width for the text box */
+}
+
+.projects-container {
+    display: flex;
+    gap: 20px; /* Adds spacing between the boxes */
+    justify-content: space-between; /* Ensures equal space between boxes */
+    align-items: stretch; /* Ensures all boxes have equal height */
+    margin-top: 20px;
+}
+
+.project-box {
+    background-color: #1e1e1e; /* Dark background */
+    color: #fff; /* Text color */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Subtle shadow */
+    flex: 1; /* Makes each box take up equal space */
+    text-align: left;
+    display: flex;
+    flex-direction: column; /* Ensures proper stacking of content inside the box */
+}
+
+.project-box h3 a {
+    color: #007eff; /* Link color */
+    text-decoration: none; /* Removes underline */
+}
+
+.project-box h3 a:hover {
+    text-decoration: underline; /* Adds underline on hover */
+}
+
+.project-box p {
+    margin-top: 10px; /* Adds space between paragraphs */
+    font-size: 1em; /* Adjust font size */
+    line-height: 1.6; /* Improves readability */
+}
 
 /* Header*/
 
@@ -321,16 +365,28 @@ nav > ul > li > a[aria-haspopup="true"]::after {
     top: auto;
 }
 
-/* Footer*/
+/* Ensure the page content does not overlap with the footer */
+#page {
+    min-height: 100vh; /* Make the page content take up at least the full viewport height */
+    display: flex;
+    flex-direction: column;
+}
+
+/* Push the footer to the bottom */
 footer {
-    position: absolute;
+    position: relative; /* Change to relative to avoid overlapping */
     bottom: 0;
     left: 0;
-    right: 0;
-    font-size: 0.8em;
-    margin: 40px;
-    color: #999;
+    width: 100%; /* Full width of the page */
+    background-color: #1e1e1e; /* Footer background color */
+    color: #fff; /* Footer text color */
+    text-align: center; /* Center the text horizontally */
+    padding: 10px 0; /* Add vertical padding */
+    font-size: 0.9em; /* Adjust font size */
+    margin-top: auto; /* Push the footer to the bottom if content is less */
+    box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.2); /* Optional: Subtle shadow for separation */
 }
+
 footer .content {
     display: inline;
 }
