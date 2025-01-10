@@ -15,12 +15,11 @@
       </a>
       <nav>
           <ul>
-              <li><a href="index.html#about">About Me</a></li>
-              <li><a href="index.html#projects">Projects</a></li>
-              <li><a href="index.html#experiences">Experiences</a></li>
-              <li><a href="index.html#contact">Contact</a></li>
-              <li><a href="gallery.html">Gallery</a></li>
-          </ul>
+
+          <li><a href="#about" onclick="showSection('about')">About Me</a></li>
+          <li><a href="#gallery" onclick="showSection('gallery')">Gallery</a></li>
+          <li><a href="#contact" onclick="showSection('contact')">Contact</a></li>
+      </ul>
       </nav>
   </header>
 
@@ -63,20 +62,38 @@
         <h2>Experiences</h2>
         <div class="expereinces-container">
             <div class="experiences-box">
-                <h3><a> Teaching Assistant</a></h3>
+                <h3><a href="https://www.linkedin.com/in/sachijoshi/details/experience/" target="_blank">Teaching Assistant</a></h3>
                 <p>• Lead discussion sections of CS210 [Intermediate Data Structures and Algorithms]</p>
                 <p>• Assisted students through questions and difficulties with Java including creating discussion section activities and visualizations</p>
                 <p>• Utilizing the projects I have done, I explained concepts and algorithms while deepening my own understanding</p>
             </div>
 
             <div class="experiences-box">
-                <h3><a>Fellow @ Break Through Tech MIT</a></h3>
+                <h3><a href="https://www.linkedin.com/in/sachijoshi/details/experience/" target="blank">Fellow @ Break Through Tech MIT</a></h3>
                 <p>• We went through a 9-week course where we learned different machine learning skills and worked on various projects and lab groups.</p>
             <p>• Weekly 3-hour lectures involved group discussions with classmates and graduate student TAs at MIT.</p>
          </div>
         </div>
     </section>
 
+    <section id="gallery" class="main">
+        <h2>Photography</h2>
+        <div class="about-content">
+            <div class="text-box">
+              <p> I really enjoy photography and taking pictures of nature and different aesthetics that match my interests! </p>
+              <p>Feel free to check out my flickr for more photos! </p>
+              <a href="https://www.flickr.com/people/202091218@N06/" target="_blank">See more of my photos</a>
+          </div>
+        </div>
+        <h3>Gallery</h3>
+        <div class="scroll-container">
+            <img src="images/building.jpg" alt="NYC building">
+            <img src="images/moon.jpg" alt="moon">
+            <img src="images/vessel.jpg" alt="The Vessel">
+            <img src="images/sunset.jpg" alt="sunset">
+            <img src="images/garlic.jpg" alt="restaurant">
+        </div>
+    </section>
 
     <section id="contact" class="main">
         <h2>Contact</h2>
